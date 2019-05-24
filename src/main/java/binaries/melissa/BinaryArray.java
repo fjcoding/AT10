@@ -25,6 +25,5 @@ public class BinaryArray {
 			decimal = decimal + binaries[i] * (int) powOfTwo;
 		}
 		return decimal;
-    	//throw new UnsupportedOperationException("Not supported yet.");
     }
 }
