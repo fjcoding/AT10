@@ -18,6 +18,13 @@ public class BinaryArray {
      * Returns the decimal numeric value equivalent to the list of binaries stored
      */
     public int ConvertToDecimalInt() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    	int decimal = 0;
+		double powOfTwo;
+		for (int i = 0; i <binaries.length ; i++) {
+			powOfTwo = Math.pow(2, binaries.length-i-1);
+			decimal = decimal + binaries[i] * (int) powOfTwo;
+		}
+		return decimal;
+    	//throw new UnsupportedOperationException("Not supported yet.");
     }
 }
