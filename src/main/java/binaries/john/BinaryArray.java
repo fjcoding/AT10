@@ -23,9 +23,7 @@ public class BinaryArray {
           double decimal = 0;
 
           for(int i = 0; i < binaries.length; i++) {
-              for(exp = binaries.length - 1; exp < 0; exp++) {
-                  decimal = decimal + binaries[i] * (int)Math.pow(2, binaries.length - 1);
-              }
+               decimal = decimal + (binaries[(binaries.length -1) - i] * (int)Math.pow(2, i));              
           }
 		return (int) decimal;
     }
