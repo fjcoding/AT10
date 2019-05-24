@@ -30,18 +30,6 @@ public class BinaryArray {
         return sumPow(arrPow,binaries);
     }
 
-    public  int binary(int arrBinary[]) {
-        if (arrBinary==null) {
-            return 0;
-        }
-
-        int [] arrPow=new int [arrBinary.length];
-        for (int i = 0; i < arrBinary.length; i++) {
-            arrPow[i]= (int) pow(arrBinary)[i];
-        }
-        return sumPow(arrPow,arrBinary);
-    }
-
     public int sumPow(int [] arrPow,int arrBinary[]){
         int sum=0;
         for (int i = 0; i <arrBinary.length ; i++) {
@@ -61,12 +49,6 @@ public class BinaryArray {
             position++;
         }
         return arrPow;
-    }
-
-    public static void main(String arg[]){
-        int [] num={1,1,1,1};
-        BinaryArray binaryArray = new BinaryArray(num);
-        System.out.println("El resultado es="+binaryArray.ConvertToDecimalInt());
     }
 
 }
