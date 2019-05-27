@@ -19,8 +19,8 @@ public class BinaryArray {
      */
     public int ConvertToDecimalInt() {
         int result = 0;
-        for (int i = 0; i < binaries.length; i++) {
-            result = (result * 2) + binaries[i];
+        for (int index = 0; index < binaries.length; index++) {
+            result = (result * 2) + binaries[index];
         }
         return result;
     }
