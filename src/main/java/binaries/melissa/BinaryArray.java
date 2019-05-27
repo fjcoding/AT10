@@ -1,5 +1,7 @@
 package binaries.melissa;
 
+import java.lang.Math;
+
 public class BinaryArray {
 
     /**
@@ -19,12 +21,12 @@ public class BinaryArray {
      */
     public int ConvertToDecimalInt() {
         int decimal = 0;
-		final int BASE_NUMBER = 2;
-		double powOfTwo;
-		for (int index = 0; index < binaries.length; index++) {
-			powOfTwo = Math.pow(BASE_NUMBER, (binaries.length - 1) - index);
-			decimal = decimal + binaries[index] * (int) powOfTwo;
-		}
-		return decimal;
+        final int BASE_NUMBER = 2;
+        double powOfTwo;
+        for (int index = 0; index < binaries.length; index++) {
+            powOfTwo = Math.pow(BASE_NUMBER, (binaries.length - 1) - index);
+            decimal = decimal + binaries[index] * (int) powOfTwo;
+        }
+        return decimal;
     }
 }
