@@ -1,12 +1,11 @@
 package binaries.josue;
-
+    
 public class BinaryArray {
 	final int base = 2;
 	/**
 	 * Array of 1s and 0s expected
 	 */
 	private int[] binaries;
-		
 	/**
 	 * Simple constructor that assigns binaries list to instace's state
 	 */
