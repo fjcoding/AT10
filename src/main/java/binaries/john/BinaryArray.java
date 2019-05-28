@@ -18,13 +18,13 @@ public class BinaryArray {
      * Returns the decimal numeric value equivalent to the list of binaries stored
      */
     public int ConvertToDecimalInt() {
-    int[] binario = binaries;
-    int number = 0;
+        int[] binari = binaries;
+        int number = 0;
 
-        for(int position = 0; position < binario.length - 1 ; position++) {
-            number = number + ((binario[(binario.length - 1 ) - position]) * (int)Math.pow(2,position));
+            for(int position = 0; position < binari.length - 1 ; position++) {
+                number = number + ((binari[(binari.length - 1 ) - position]) * (int)Math.pow(2,position));
         }
 
-        return (int) number;
+            return (int) number;
     }
 }
