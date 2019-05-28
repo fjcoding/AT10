@@ -23,6 +23,6 @@ public class BinaryArray {
         for(int position = 0; position < binary.length - 1 ; position++) {
             number = number + ((binary[(binary.length - 1 ) - position]) * (int)Math.pow(2,position));
         }
-        return (int) number;
+        return number;
     }
 }
