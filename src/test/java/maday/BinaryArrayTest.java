@@ -14,4 +14,12 @@ public class BinaryArrayTest {
         int actual = binaryArray.ConvertToDecimalInt();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void ConvertToDecimalInt_ArrayWithValidData_Result43(){
+        binaryArray = new BinaryArray(new int[]{1, 0, 1, 0, 1, 1});
+        int expected = 43;
+        int actual = binaryArray.ConvertToDecimalInt();
+        assertEquals(expected, actual);
+    }
 }
