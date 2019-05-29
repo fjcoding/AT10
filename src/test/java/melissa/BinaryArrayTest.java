@@ -7,28 +7,28 @@ import org.junit.Test;
 public class BinaryArrayTest {
 
     @Test
-    public void ConvertToDecimalInt_validInPut43_correctResult() {
+    public void ConvertToDecimalInt_validInput101011_correctResult() {
         int[] array = { 1, 0, 1, 0, 1, 1 };
         BinaryArray binary = new BinaryArray(array);
         assertEquals(43, binary.ConvertToDecimalInt());
     }
 
     @Test
-    public void ConvertToDecimalInt_validInPut345_correctResult() {
+    public void ConvertToDecimalInt_validInput101011001_correctResult() {
         int[] array = { 1, 0, 1, 0, 1, 1, 0, 0, 1 };
         BinaryArray binary = new BinaryArray(array);
         assertEquals(345, binary.ConvertToDecimalInt());
     }
 
     @Test
-    public void isValid_validInPut_correctResult() {
+    public void isValid_validInput_correctResult() {
         int[] array = { 1, 0, 1, 1 };
         BinaryArray binary = new BinaryArray(array);
         assertTrue(binary.isValid());
     }
 
     @Test
-    public void isValid_InvalidInPut_correctResult() {
+    public void isValid_InvalidInput_correctResult() {
         int[] array = { 1, 0, 1, 2 };
         BinaryArray binary = new BinaryArray(array);
         assertFalse(binary.isValid());

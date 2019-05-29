@@ -1,19 +1,16 @@
 package binaries.melissa;
 
-import java.lang.Math;
-
-public class BinaryArray {
-
+public class HexadecimalArray {
     /**
      * Array of 1s and 0s expected
      */
-    private int[] binaries;
+    private char[] hexadecimals;
 
     /**
      * Simple constructor that assigns binaries list to instace's state
      */
-    public BinaryArray(int[] binaries) {
-        this.binaries = binaries;
+    public HexadecimalArray(char[] hexadecimals) {
+        this.hexadecimals = hexadecimals;
     }
 
     /**
@@ -23,8 +20,8 @@ public class BinaryArray {
      */
     public boolean isValid() {
         boolean answer = true;
-        for (int index = 0; index < binaries.length; index++) {
-            if (binaries[index] < 0 || binaries[index] > 1) {
+        for (int index = 0; index < hexadecimals.length; index++) {
+            if (Character.getNumericValue(hexadecimals[index]) < 0 || Character.getNumericValue(hexadecimals[index]) > 15) {
                 answer = false;
             }
         }
@@ -36,11 +33,11 @@ public class BinaryArray {
      */
     public int ConvertToDecimalInt() {
         int decimal = 0;
-        final int BASE_NUMBER = 2;
-        double powOfTwo;
-        for (int index = 0; index < binaries.length; index++) {
-            powOfTwo = Math.pow(BASE_NUMBER, (binaries.length - 1) - index);
-            decimal = decimal + binaries[index] * (int) powOfTwo;
+        final int BASE_NUMBER = 16;
+        double powOfSixteen;
+        for (int index = 0; index < hexadecimals.length; index++) {
+            powOfSixteen = Math.pow(BASE_NUMBER, (hexadecimals.length - 1) - index);
+            decimal = decimal + Character.getNumericValue(hexadecimals[index]) * (int) powOfSixteen;
         }
         return decimal;
     }
@@ -54,11 +51,11 @@ public class BinaryArray {
     public int ConvertToDecimalIntInoutValidation() {
         if (isValid()) {
             int decimal = 0;
-            final int BASE_NUMBER = 2;
-            double powOfTwo;
-            for (int index = 0; index < binaries.length; index++) {
-                powOfTwo = Math.pow(BASE_NUMBER, (binaries.length - 1) - index);
-                decimal = decimal + binaries[index] * (int) powOfTwo;
+            final int BASE_NUMBER = 16;
+            double powOfSixteen;
+            for (int index = 0; index < hexadecimals.length; index++) {
+                powOfSixteen = Math.pow(BASE_NUMBER, (hexadecimals.length - 1) - index);
+                decimal = decimal + Character.getNumericValue(hexadecimals[index]) * (int) powOfSixteen;
             }
             return decimal;
         } else {
