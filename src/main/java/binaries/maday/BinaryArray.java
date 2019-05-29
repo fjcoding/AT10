@@ -22,7 +22,7 @@ public class BinaryArray {
         int power = binaries.length - 1;
         int decimal = 0;
         for (int index : binaries) {
-            if (verificar(index)) {
+            if (verifyBinarie(index)) {
                 int converted = index * (int) (Math.pow(BASE, power));
                 decimal = decimal + converted;
                 power--;
@@ -33,9 +33,9 @@ public class BinaryArray {
         return decimal;
     }
 
-    public boolean verificar(int numero) {
+    public boolean verifyBinarie(int number) {
         boolean result = false;
-        if (numero < 2 && numero > -1) {
+        if (number < 2 && number > -1) {
             result = true;
         }
         return result;
