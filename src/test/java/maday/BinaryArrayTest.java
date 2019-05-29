@@ -26,10 +26,8 @@ public class BinaryArrayTest {
     @Test(expected = ArithmeticException.class)
     public void ConvertToDecimalInt_ExceptionExpected_ResultCaptureException() {
         binaryArray = new BinaryArray(new int[]{0, 2, 6, 25});
-        String expected = "Error de conversion, no son Binarios.";
+        String expected = "Not Binaries";
         int actual = binaryArray.ConvertToDecimalInt();
         assertEquals(expected, actual);
-
-
     }
 }
