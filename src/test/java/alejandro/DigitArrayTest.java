@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BinaryArrayTest {
+public class DigitArrayTest {
     @Test
     public void ConvertToDecimalInt_singleBit1_result1() {
         int expected = 1;
