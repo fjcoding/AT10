@@ -21,9 +21,21 @@ public class BinaryArray {
         int result = 0;
         int cont = 0;
         for (int index = binaries.length - 1; index >= 0; index--) {
-            result = result + ((int) (Math.pow(base, cont)) * binaries[index]);
-            cont++;
+        	if(checkIsBinarie(binaries[index])) {
+        		result = result + ((int) (Math.pow(base, cont)) * binaries[index]);
+                cont++;
+        	}else {
+        		throw new ArithmeticException("Not binario");
+        	}
+            
         }
         return result;
+    }
+    public boolean checkIsBinarie(int number) {
+    	boolean result=false;
+    	if(number < 2 && number >-1) {
+    		result=true;
+    	}
+    	return result;
     }
 }

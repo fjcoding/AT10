@@ -17,5 +17,9 @@ public class BinaryArrayTest {
 		BinaryArray actual = new BinaryArray(new int[] {1,0,1,0,1,1});
 		assertEquals(43, actual.ConvertToDecimalInt());
 	}
-	
+	@Test(expected = Exception.class)
+	public void convertToDecimalInt_enterNotEmptyStringWithNumbersNotBinarie_resultNotBinarie() {
+		BinaryArray actual = new BinaryArray(new int [] {1,-1});
+		assertEquals("Not binario", actual.ConvertToDecimalInt());
+	}
 }
