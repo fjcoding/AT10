@@ -20,17 +20,30 @@ public class BinaryArray {
             return 0;
         }
         int [] arrPow=new int [binaries.length];
-        for (int index = 0; index < binaries.length; index++) {
-            arrPow[index] = (int) pow(binaries)[index];
+        try {
+            for (int index = 0; index < binaries.length; index++) {
+                arrPow[index] = (int) pow(binaries)[index];
+            }
+
+        }
+        catch(Exception e){
+            System.out.println("Something's wrong");
         }
         return sumPow(arrPow,binaries);
     }
     public int sumPow(int [] arrPow,int arrBinary[]){
         int sum=0;
-        for (int index = 0; index <arrBinary.length ; index++) {
-            if (arrBinary[index] == 1){
-                sum+=arrPow[index];
+        try{
+
+            for (int index = 0; index <arrBinary.length ; index++) {
+                if (arrBinary[index] == 1){
+                    sum+=arrPow[index];
+                }
             }
+
+        }
+        catch (Exception e){
+            System.out.println("Could not sum the pow");
         }
         return sum;
     }
@@ -39,10 +52,16 @@ public class BinaryArray {
         int suma = 0;
         int position = 0;
         final int base = 2;
-        for (int index = arrayBinary.length-1; index >= 0; index--) {
-            arrPow[position] = Math.pow(base, index);
-            position++;
+        try{
+            for (int index = arrayBinary.length-1; index >= 0; index--) {
+                arrPow[position] = Math.pow(base, index);
+                position++;
+            }
+        }
+        catch (Exception e){
+            System.out.println("Could not pow");
         }
         return arrPow;
+
     }
 }

@@ -9,6 +9,16 @@ public class BinaryArrayTest {
 
     BinaryArray actualbinaryArray;
 
+    @Test (expected = IllegalArgumentException.class)
+    public void binary_comvertToDeciamValueNll_resultMistake() throws Exception {
+        (new BinaryArray(new int[]{})).ConvertToDecimalInt();
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void binary_mistakevaluenegative_resultMistake() throws Exception {
+        (new BinaryArray(new int[]{-1,2,-4})).ConvertToDecimalInt();
+    }
+
     @Test
     public void binary_comvertToDeciam_result1() throws Exception {
         int expected = 1;
@@ -16,7 +26,7 @@ public class BinaryArrayTest {
         actualbinaryArray= new BinaryArray(act);
         assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
         System.out.println(actualbinaryArray.ConvertToDecimalInt());
-        assert
+
     }
 
     @Test
