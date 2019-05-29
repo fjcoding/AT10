@@ -21,7 +21,7 @@ public class BinaryArray {
         int vector_length = binaries.length;
         int decimal_number = 0;
         int base = 2;
-        for (int vector_position = vector_length - 1; vector_position > 0; vector_position--) {
+        for (int vector_position = vector_length - 1; vector_position >= 0; vector_position--) {
             decimal_number = decimal_number + binaries[vector_position] * (int) Math.pow(base, vector_length - 1 - vector_position);
         }
         return decimal_number;
