@@ -20,7 +20,12 @@ public class BinaryArray {
     public int ConvertToDecimalInt() {
         int result = 0;
         for (int index = 0; index < binaries.length; index++) {
-            result = (result * 2) + binaries[index];
+            if (binaries[index] == 0 || binaries[index] == 1) {
+                result = (result * 2) + binaries[index];
+            }else {
+                throw new UnsupportedOperationException("Not a binary digit");
+            }
+            
         }
         return result;
     }

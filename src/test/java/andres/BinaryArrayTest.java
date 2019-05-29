@@ -13,4 +13,11 @@ public class BinaryArrayTest {
         int actual = converter.ConvertToDecimalInt();
         assertEquals(actual,expected);
     }
+    
+    @Test (expected = Exception.class)
+    public void ConvertToDecimalIntTest_notBinaryDigit() {
+        int[] binary = {1,1,5,0};
+        BinaryArray converter = new BinaryArray(binary);
+        int actual = converter.ConvertToDecimalInt();        
+    }
 }
