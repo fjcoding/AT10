@@ -16,10 +16,20 @@ public class BinaryArrayTest {
     }
 
     @Test
-    public void ConvertToDecimalInt_ArrayWithValidData_Result43(){
+    public void ConvertToDecimalInt_ArrayWithValidData_Result43() {
         binaryArray = new BinaryArray(new int[]{1, 0, 1, 0, 1, 1});
         int expected = 43;
         int actual = binaryArray.ConvertToDecimalInt();
         assertEquals(expected, actual);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void ConvertToDecimalInt_ExceptionExpected_ResultCaptureException() {
+        binaryArray = new BinaryArray(new int[]{0, 2, 6, 25});
+        String expected = "Error de conversion, no son Binarios.";
+        int actual = binaryArray.ConvertToDecimalInt();
+        assertEquals(expected, actual);
+
+
     }
 }
