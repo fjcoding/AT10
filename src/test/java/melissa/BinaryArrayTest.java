@@ -21,6 +21,13 @@ public class BinaryArrayTest {
     }
 
     @Test
+    public void ConvertToDecimalInt_validInputEmptyArray_correctResult() {
+        int[] array = {};
+        BinaryArray binary = new BinaryArray(array);
+        assertEquals(0, binary.ConvertToDecimalInt());
+    }
+
+    @Test
     public void isValid_validInput_correctResult() {
         int[] array = { 1, 0, 1, 1 };
         BinaryArray binary = new BinaryArray(array);
