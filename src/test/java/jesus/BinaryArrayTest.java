@@ -1,8 +1,70 @@
-package binaries.jesus;
 
-import static org.junit.Assert.*;
+package binaries.jesus;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class BinaryArrayTest {
+
+    BinaryArray actualbinaryArray;
+
+    @Test
+    public void binary_comvertToDeciam_result1() throws Exception {
+        int expected = 1;
+        int[] act={0,0,0,1};
+        actualbinaryArray= new BinaryArray(act);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+        System.out.println(actualbinaryArray.ConvertToDecimalInt());
+        assert
+    }
+
+    @Test
+    public void binary_comvertToDeciam_result2() throws Exception {
+        int expected = 2;
+        int [] actual = {0,0,1,0};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
+    @Test
+    public void binary_comvertToDeciam_result5() throws Exception {
+        int expected = 5;
+        int [] actual = {0,1,0,1};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
+    @Test
+    public void binary_comvertToDeciam_result9() throws Exception {
+        int expected = 9;
+        int [] actual = {1,0,0,1};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
+    @Test
+    public void binary_comvertToDeciam_resultc2() throws Exception {
+        int expected = 2;
+        int [] actual = {0,0,1,0};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
+    @Test
+    public void binary_comvertToDeciam_result6() throws Exception {
+        int expected = 6;
+        int [] actual = {0,1,1,0};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
+    @Test
+    public void binary_comvertToDeciam_result15() throws Exception {
+        int expected = 15;
+        int [] actual = {1,1,1,1};
+        actualbinaryArray= new BinaryArray(actual);
+        assertEquals(expected, actualbinaryArray.ConvertToDecimalInt());
+    }
+
 }
