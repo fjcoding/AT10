@@ -16,13 +16,19 @@ public class BinaryArray {
 
     /**
      * Returns the decimal numeric value equivalent to the list of binaries stored
+     * 
+     * @throws Exception
      */
-    public int ConvertToDecimalInt() {
+    public int ConvertToDecimalInt() throws IllegalArgumentException {
         int vector_length = binaries.length;
         int decimal_number = 0;
         int base = 2;
         for (int vector_position = vector_length - 1; vector_position >= 0; vector_position--) {
-            decimal_number = decimal_number + binaries[vector_position] * (int) Math.pow(base, vector_length - 1 - vector_position);
+            if((binaries[vector_position]>=0) && (binaries[vector_position]<=1)){
+                decimal_number = decimal_number + binaries[vector_position] * (int) Math.pow(base, vector_length - 1 - vector_position);
+            } else {
+                throw new IllegalArgumentException("Dato no valido");
+            }
         }
         return decimal_number;
     }
