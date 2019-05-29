@@ -51,6 +51,15 @@ public class Main {
     private static void printResult(String student, int[] argsAsInts) {
         int result = 0;
         switch (student) {
+            case ALEJANDRO: result = new binaries.alejandro.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case ANDRES: result = new binaries.andres.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case JESUS: result = new binaries.jesus.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case JOHN: result = new binaries.john.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case JOSUE: result = new binaries.josue.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case LIMBERT: result = new binaries.limbert.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case MADAY: result = new binaries.maday.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case MELISSA: result = new binaries.melissa.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            default: throw new IllegalArgumentException("Unknown student! who are you?");
         }
         System.out.println(student + "'s result is: " + result);
     }
