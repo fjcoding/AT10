@@ -15,7 +15,6 @@ public class Main {
 
     static final int STUDENT = 0;
     static final int START = 1;
-    int base;
 
     // AT10 students
     static final String ALEJANDRO = "alejandro";
@@ -49,20 +48,20 @@ public class Main {
 
     private static int[] toInts(String[] args) {
         int[] argsAsInts = new int[args.length - 2];
-        int i = 0;
+        int incremental = 0;
         for (int index = START; index < args.length - 1; index++) {
-            argsAsInts[i] = Integer.parseInt(args[index]);
-            i++;
+            argsAsInts[incremental] = Integer.parseInt(args[index]);
+            incremental++;
         }
         return argsAsInts;
     }
 
     private static String[] toDecimal(String[] args) {
-        int i = 0;
+        int incremental = 0;
         String[] argsAsDecimal = new String[args.length - 2];
         for (int index = START; index < args.length - 1; index++) {
-            argsAsDecimal[i] = args[index];
-            i++;
+            argsAsDecimal[incremental] = args[index];
+            incremental++;
         }
         return argsAsDecimal;
     }
