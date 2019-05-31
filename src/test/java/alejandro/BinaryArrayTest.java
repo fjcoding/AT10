@@ -18,4 +18,18 @@ public class BinaryArrayTest {
         int actual = (new BinaryArray(new String[]{"1"})).ConvertToDecimalInt('b');
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void ConvertToDecimalIntB_mostSignificativeBit0_result509() {
+        int expected = 509;
+        int actual = (new BinaryArray(new String[]{"0", "1", "1", "1", "1", "1", "1", "1", "0", "1"})).ConvertToDecimalInt('b');
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void ConvertToDecimalIntB_mostSignificativeBit1_result509() {
+        int expected = 509;
+        int actual = (new BinaryArray(new String[]{"1", "1", "1", "1", "1", "1", "1", "0", "1"})).ConvertToDecimalInt('b');
+        assertEquals(expected, actual);
+    }
 }
