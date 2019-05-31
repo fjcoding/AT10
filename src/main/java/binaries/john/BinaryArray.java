@@ -20,8 +20,13 @@ public class BinaryArray {
     public int ConvertToDecimalInt() {
         int[] binary = binaries;
         int number = 0;
-        for(int position = 0; position < binary.length - 1 ; position++) {
-            number = number + ((binary[(binary.length - 1 ) - position]) * (int)Math.pow(2,position));
+        for(int position = 0; position <= binary.length - 1 ; position++) {
+            if (binary[position] >= 0 && binary[position] <= 1){
+                number = number + ((binary[(binary.length - 1) - position]) * (int) Math.pow(2, position));
+            }
+			else{
+                throw new IllegalArgumentException("Invalid digit!");
+			}
         }
         return number;
     }
