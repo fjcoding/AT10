@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class HexdecimalStringTest {
 
-    HexadecimalArray hexadecimalArray;
+    HexadecimalString hexadecimalArray;
 
     @Test(expected = IllegalArgumentException.class)
     public void binary_comvertToDeciamValueNll_resultMistake() throws Exception {

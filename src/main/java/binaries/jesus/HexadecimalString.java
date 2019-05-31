@@ -21,7 +21,7 @@ public class HexadecimalString {
         }
     }
     public static void main(String arg[]){
-        HexadecimalArray hexadecimalArray=new HexadecimalArray("123ABCDE");
+        HexadecimalString hexadecimalArray=new HexadecimalString("123ABCDE");
         System.out.println(hexadecimalArray.ConvertToHexadecimalInt());
         System.out.println(Integer.valueOf("AB", 16));
     }
