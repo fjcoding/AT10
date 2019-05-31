@@ -22,10 +22,22 @@ public class BinaryArray {
         int power = binaries.length - 1;
         int decimal = 0;
         for (int index : binaries) {
-            int converted = index * (int) (Math.pow(BASE, power));
-            decimal = decimal + converted;
-            power--;
+            if (verifyBinarie(index)) {
+                int converted = index * (int) (Math.pow(BASE, power));
+                decimal = decimal + converted;
+                power--;
+            } else {
+                throw new ArithmeticException("Not Binaries");
+            }
         }
         return decimal;
+    }
+
+    public boolean verifyBinarie(int number) {
+        boolean result = false;
+        if (number < 2 && number > -1) {
+            result = true;
+        }
+        return result;
     }
 }
