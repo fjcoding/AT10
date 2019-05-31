@@ -22,27 +22,7 @@ public class HexadecimalArray {
         int power = hexadecimal.length - 1;
         int decimal = 0;
         for (String index : hexadecimal) {
-
-            if (index == "a" || index == "A")
-                auxiliar = 10;
-
-            else if (index == "b" || index == "B")
-                auxiliar = 11;
-
-            else if (index == "c" || index == "C")
-                auxiliar = 12;
-
-            else if (index == "d" || index == "D")
-                auxiliar = 13;
-
-            else if (index == "e" || index == "E")
-                auxiliar = 14;
-
-            else if (index == "f" || index == "F")
-                auxiliar = 15;
-
-            else
-                auxiliar = Integer.parseInt(index);
+            auxiliar = Integer.parseInt(index,BASE);
             decimal = decimal + (auxiliar * (int) (Math.pow(BASE, power)));
             power--;
         }
