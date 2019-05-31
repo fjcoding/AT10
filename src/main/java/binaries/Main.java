@@ -29,7 +29,12 @@ public class Main {
     public static void main(String[] args) {
         String student = getStudent(args);
         int[] argsAsInts = toInts(args);
-        printResult(student, argsAsInts);
+        String argsAsString=args[1];
+        if(args.length == 2){
+            printResults(student, argsAsString);
+        } else {
+            printResult(student, argsAsInts);
+        }
     }
 
     private static String getStudent(String[] args) {
@@ -41,9 +46,9 @@ public class Main {
     }
 
     private static int[] toInts(String[] args) {
-        int[] argsAsInts = new int[args.length];
-        for (int index = BINARY_START; index < args.length; index++) {
-            argsAsInts[index] = Integer.parseInt(args[index]);
+        int[] argsAsInts = new int[args.length-1];
+        for (int index = BINARY_START; index < args.length-1; index++) {
+            argsAsInts[index-BINARY_START] = Integer.parseInt(args[index]);
         }
         return argsAsInts;
     }
@@ -59,6 +64,15 @@ public class Main {
             case LIMBERT: result = new binaries.limbert.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
             case MADAY: result = new binaries.maday.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
             case MELISSA: result = new binaries.melissa.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            default: throw new IllegalArgumentException("Unknown student! who are you?");
+        }
+        System.out.println(student + "'s result is: " + result);
+    }
+
+    private static void printResults(String student, String argsAsString) {
+        int result = 0;
+        switch (student) {
+            case LIMBERT: result = new binaries.limbert.BinaryArray(argsAsString).HexadecimalToDecimal(); break;
             default: throw new IllegalArgumentException("Unknown student! who are you?");
         }
         System.out.println(student + "'s result is: " + result);
