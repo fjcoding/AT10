@@ -3,14 +3,14 @@ package binaries.alejandro;
 public class BinaryArray {
 
     /**
-     * Array of 1s and 0s expected
+     * Array of single strings expected
      */ 
-    private int[] binaries;
+    private String[] binaries;
 
     /**
-     * Simple constructor that assigns binaries list to instace's state
+     * Simple constructor that assigns binaries list to instance's state
      */
-    public BinaryArray(int[] binaries) {
+    public BinaryArray(String[] binaries) {
         this.binaries = binaries;
     }
 
@@ -18,13 +18,6 @@ public class BinaryArray {
      * Returns the decimal numeric value equivalent to the list of binaries stored
      */
     public int ConvertToDecimalInt() {
-        final int BASE = 2;
-        int result = 0;
-        int upperLimit = binaries.length - 1;
-        int lowerLimit = 0;
-        for (int arrayIndex = upperLimit; arrayIndex > lowerLimit; arrayIndex--) {
-            result += (binaries[arrayIndex]) * (Math.pow(BASE, upperLimit - arrayIndex));
-        }
-        return result;
+        return 0;
     }
 }
