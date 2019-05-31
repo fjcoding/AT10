@@ -5,6 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class BinaryArrayTest {
+    @Test (expected = IllegalArgumentException.class)
+    public void ConvertToDecimalIntB_noDigits_resultIllegalArgumentException() {
+        (new BinaryArray(new String[]{})).ConvertToDecimalInt('b');
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void ConvertToDecimalIntB_outOfBandDigitsMinus9_resultIllegalArgumentException() {
+        (new BinaryArray(new String[]{"-9"})).ConvertToDecimalInt('b');
+    }
+
+    @Test (expected = Exception.class)
+    public void ConvertToDecimalIntB_outOfBoundsDigits4_resultNumberFormatException() {
+        (new BinaryArray(new String[]{"4"})).ConvertToDecimalInt('b');
+    }
+
     @Test
     public void ConvertToDecimalIntB_singleBit0_result0() {
         int expected = 0;
