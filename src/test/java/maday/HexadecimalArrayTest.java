@@ -9,10 +9,9 @@ public class HexadecimalArrayTest {
 
     @Test
     public void ConvertToDecimalInt_EmptyArray_Result0() {
-        hexadecimalArray = new HexadecimalArray(new int[]{});
+        hexadecimalArray = new HexadecimalArray(new String[]{});
         int expected = 0;
         int actual = hexadecimalArray.ConvertToDecimalInt();
         assertEquals(expected, actual);
     }
-
 }
