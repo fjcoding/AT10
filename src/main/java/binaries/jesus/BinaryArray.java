@@ -15,7 +15,6 @@ public class BinaryArray {
      * Returns the decimal numeric value equivalent to the list of binaries stored
      */
     public int ConvertToDecimalInt() {
-
         if (binaries == null) {
             return 0;
         }
@@ -24,10 +23,9 @@ public class BinaryArray {
             for (int index = 0; index < binaries.length; index++) {
                 arrPow[index] = (int) pow(binaries)[index];
             }
-
         }
         catch(Exception e){
-            System.out.println("Something's wrong");
+            throw new IllegalArgumentException("Error something worms");
         }
         return sumPow(arrPow,binaries);
     }
@@ -43,7 +41,7 @@ public class BinaryArray {
 
         }
         catch (Exception e){
-            System.out.println("Could not sum the pow");
+            throw new IllegalArgumentException("Error something worms");
         }
         return sum;
     }
@@ -59,7 +57,7 @@ public class BinaryArray {
             }
         }
         catch (Exception e){
-            System.out.println("Could not pow");
+            throw new IllegalArgumentException("Error something worms");
         }
         return arrPow;
 

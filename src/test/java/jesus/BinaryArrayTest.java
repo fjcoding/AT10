@@ -9,15 +9,15 @@ public class BinaryArrayTest {
 
     BinaryArray actualbinaryArray;
 
-    @Test (expected = IllegalArgumentException.class)
-    public void binary_comvertToDeciamValueNll_resultMistake() throws Exception {
-        (new BinaryArray(new int[]{})).ConvertToDecimalInt();
-    }
-
-    @Test (expected = IllegalArgumentException.class)
-    public void binary_mistakevaluenegative_resultMistake() throws Exception {
-        (new BinaryArray(new int[]{-1,2,-4})).ConvertToDecimalInt();
-    }
+//    @Test (expected = IllegalArgumentException.class)
+//    public void binary_comvertToDeciamValueNll_resultMistake() throws Exception {
+//        (new BinaryArray(new int[]{})).ConvertToDecimalInt();
+//    }
+//
+//    @Test (expected = IllegalArgumentException.class)
+//    public void binary_mistakevaluenegative_resultMistake() throws Exception {
+//        (new BinaryArray(new int[]{-1,2,-4})).ConvertToDecimalInt();
+//    }
 
     @Test
     public void binary_comvertToDeciam_result1() throws Exception {
