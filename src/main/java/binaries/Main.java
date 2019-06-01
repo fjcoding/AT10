@@ -13,6 +13,7 @@ package binaries;
  */
 public class Main {
 
+    static final int MINIMAL_ARGS = 2;
     static final int STUDENT = 0;
     static final int BINARY_START = 1;
 
@@ -27,9 +28,18 @@ public class Main {
     static final String MELISSA = "melissa";
 
     public static void main(String[] args) {
-        String student = getStudent(args);
-        int[] argsAsInts = toInts(args);
-        printResult(student, argsAsInts);
+        if (args.length < MINIMAL_ARGS) {
+            throw new IllegalArgumentException("Not enough arguments!");
+        } else {
+            /* Excluding name and source base arguments */
+            int DIGITS_LENGTH = args.length - 2;
+
+            String student = getStudent(args);
+                String[] digits = new String[DIGITS_LENGTH];
+            digits = getDigits(args);
+            char baseArgument = getBase(args);
+            printResult(student, digits, baseArgument);
+        }
     }
 
     private static String getStudent(String[] args) {
@@ -40,25 +50,39 @@ public class Main {
         }
     }
 
-    private static int[] toInts(String[] args) {
-        int[] argsAsInts = new int[args.length];
-        for (int index = BINARY_START; index < args.length; index++) {
-            argsAsInts[index] = Integer.parseInt(args[index]);
+    private static String[] getDigits(String[] args) {
+        /* Excluding source base argument */
+        int BINARY_END = args.length - 1;
+
+        /* Excluding Student's name and source base arguments */
+        int DIGITS_LENGTH = args.length - 2;
+        
+        String[] digits = new String[DIGITS_LENGTH];
+        for (int index = BINARY_START; index < BINARY_END; index++) {
+            digits[index - BINARY_START] = args[index];
         }
-        return argsAsInts;
+        return digits;
     }
 
-    private static void printResult(String student, int[] argsAsInts) {
+    private static char getBase(String[] args) {
+        int BASE_POSITION = args.length - 1;
+        char fromBase = args[BASE_POSITION].charAt(0);
+        return fromBase;
+    }
+
+    private static void printResult(String student, String[] digits, char fromBase) {
         int result = 0;
         switch (student) {
-            case ALEJANDRO: result = new binaries.alejandro.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case ANDRES: result = new binaries.andres.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case JESUS: result = new binaries.jesus.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case JOHN: result = new binaries.john.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case JOSUE: result = new binaries.josue.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case LIMBERT: result = new binaries.limbert.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case MADAY: result = new binaries.maday.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
-            case MELISSA: result = new binaries.melissa.BinaryArray(argsAsInts).ConvertToDecimalInt(); break;
+            case ALEJANDRO: result = new binaries.alejandro.DigitsArray(digits).convertToDecimalInteger(fromBase); break;
+            /*
+            case ANDRES: result = new binaries.andres.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case JESUS: result = new binaries.jesus.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case JOHN: result = new binaries.john.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case JOSUE: result = new binaries.josue.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case LIMBERT: result = new binaries.limbert.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case MADAY: result = new binaries.maday.BinaryArray(digits).ConvertToDecimalInt(); break;
+            case MELISSA: result = new binaries.melissa.BinaryArray(digits).ConvertToDecimalInt(); break;
+            */
             default: throw new IllegalArgumentException("Unknown student! who are you?");
         }
         System.out.println(student + "'s result is: " + result);
