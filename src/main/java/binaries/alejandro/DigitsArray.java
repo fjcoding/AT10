@@ -1,6 +1,6 @@
 package binaries.alejandro;
 
-public class BinaryArray {
+public class DigitsArray {
 
     /**
      * Array of single strings expected
@@ -10,19 +10,22 @@ public class BinaryArray {
     /**
      * Simple constructor that assigns binaries list to instance's state
      */
-    public BinaryArray(String[] binaries) {
+    public DigitsArray(String[] binaries) {
         this.binaries = binaries;
     }
 
     /**
-     * Returns the decimal numeric value equivalent to the list of binaries stored
+     *
+     * Input:  Character equivalent to the numbering base: 'b' for binary and 'h' for hexadecimal
+     * Output: Returns a decimal numeric value equivalent to the list of digits stored
+     * 
      */
-    public int ConvertToDecimalInt(char baseArg) {
+    public int convertToDecimalInteger(char fromBase) {
         int sourceBase;
         int result = 0;
 
         if (binaries.length != 0) {
-            switch (baseArg) {
+            switch (fromBase) {
                 case 'b':
                     sourceBase = 2;
                     break;

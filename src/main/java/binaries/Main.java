@@ -37,8 +37,8 @@ public class Main {
             String student = getStudent(args);
                 String[] digits = new String[DIGITS_LENGTH];
             digits = getDigits(args);
-            char baseArg = getBase(args);
-            printResult(student, digits, baseArg);
+            char baseArgument = getBase(args);
+            printResult(student, digits, baseArgument);
         }
     }
 
@@ -66,14 +66,14 @@ public class Main {
 
     private static char getBase(String[] args) {
         int BASE_POSITION = args.length - 1;
-        char baseArg = args[BASE_POSITION].charAt(0);
-        return baseArg;
+        char fromBase = args[BASE_POSITION].charAt(0);
+        return fromBase;
     }
 
-    private static void printResult(String student, String[] digits, char baseArg) {
+    private static void printResult(String student, String[] digits, char fromBase) {
         int result = 0;
         switch (student) {
-            case ALEJANDRO: result = new binaries.alejandro.BinaryArray(digits).ConvertToDecimalInt(baseArg); break;
+            case ALEJANDRO: result = new binaries.alejandro.DigitsArray(digits).convertToDecimalInteger(fromBase); break;
             /*
             case ANDRES: result = new binaries.andres.BinaryArray(digits).ConvertToDecimalInt(); break;
             case JESUS: result = new binaries.jesus.BinaryArray(digits).ConvertToDecimalInt(); break;
