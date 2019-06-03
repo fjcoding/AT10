@@ -22,6 +22,5 @@ public class HexadecimalConvert {
         } catch (Exception e) {
             throw new IllegalArgumentException("Invalid value");
         }
-
     }
 }
