@@ -27,12 +27,6 @@ public class BinaryArrayTest {
     public void Binary_unitTest_negative() {
         (new BinaryArray(new int[]{-1, 0})).ConvertToDecimalInt();
     }
-	//Hexadecimal test
-	@Test
-    public void Binary_unitTest_result2() {
-        int expected = 2748;
-        int actual = new BinaryArray(new String[]{"A","B", "C" }).ConvertToDecimalInt();
-        assertEquals(expected, actual);
-	}
 }
+
 
