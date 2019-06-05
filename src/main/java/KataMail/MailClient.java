@@ -1,5 +1,11 @@
 public class MailClient {
-    public boolean connect(Server server){
-        return true;
+
+    String userName;
+    public MailClient(String userName){
+        this.userName = userName;
     }
+    public String getUsername(){
+        return this.userName;
+    }
+
 }
