@@ -18,4 +18,8 @@ public class Server {
         }
         return answer;
     }
+
+    public void addClient(MailClient client) {
+        clients.add(client);
+    }
 }

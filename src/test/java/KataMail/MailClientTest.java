@@ -12,4 +12,5 @@ public class MailClientTest {
         boolean expected = true;
         assertEquals(expected, actual);
     }
+    
 }
