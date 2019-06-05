@@ -5,12 +5,14 @@ import org.junit.Test;
 public class ServerTest {
 
     @Test
-    public void verifyClient_server_resultTrue () {
+    public void verifyClient_server_resultFalse () {
         Server server = new Server();
         MailClient client = new MailClient();
         boolean actual  = server.verifyClient(client);
-        boolean expected = true;
+        boolean expected = false;
         assertEquals(expected, actual);
     }
+    
+      
     
 }
