@@ -1,5 +1,5 @@
 public class MailClient {
-    public boolean connect(Server server){
-        return true;
+    public boolean connectServer(Server server){
+        return server.verifyClient(this);
     }
 }
