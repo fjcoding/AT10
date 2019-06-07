@@ -6,7 +6,7 @@ public class MailClient {
     }
 
     public MailClient() {
-
+        
     }
 
     public boolean connectServer(Server server) {
