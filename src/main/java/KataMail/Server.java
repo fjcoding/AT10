@@ -21,10 +21,10 @@ public class Server {
         return answer;
     }
 
-    public void addClient(MailClient client) {
+    public void createAccount(MailClient client) {
         clients.add(client);
     }
-    
+
     public boolean verifyMail(Mail mail) {
         boolean answer = false;
         for (int index = 0; index < mails.size(); index++) {
@@ -35,8 +35,9 @@ public class Server {
         }
         return answer;
     }
-    
+
     public void addMail(Mail mail) {
         mails.add(mail);
     }
+    
 }
