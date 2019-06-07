@@ -17,4 +17,7 @@ public class MailClient {
         return address.equals(client.address);
     }
 
+    public void sendMail(Server server, Mail mail) {
+        server.addMail(mail);
+    }
 }
