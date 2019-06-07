@@ -31,4 +31,14 @@ public class ServerTest {
         boolean expected = false;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void addMail_resultTrue() {
+        Server server = new Server();
+        Mail mail = new Mail();
+        server.addMail(mail);
+        boolean actual = server.verifyMail(mail);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
 }

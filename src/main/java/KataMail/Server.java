@@ -35,4 +35,8 @@ public class Server {
         }
         return answer;
     }
+    
+    public void addMail(Mail mail) {
+        mails.add(mail);
+    }
 }
