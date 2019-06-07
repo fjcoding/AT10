@@ -1,12 +1,12 @@
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class MailClientTest {
     @Test
-    public void getUserName_getJose_resultJose() {
-        MailClient jose = new MailClient("Jose");
-        assertEquals("Jose", jose.getUsername());
+    public void connectServer_resultTrue() {
+        MailClient client = new MailClient();
+        Server server = new Server();
+        assertEquals(true, client.connectServer("pepitogrillo", server));
     }
-
-
 }
