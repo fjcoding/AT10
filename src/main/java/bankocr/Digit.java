@@ -22,6 +22,11 @@ public class Digit {
         " _|" +
         " _|";
 
+    public static final String FOUR_STRING = 
+        "   " +
+        "|_|" +
+        "  |";
+
     private String head;
     private String body;
     private String foot;
@@ -39,6 +44,7 @@ public class Digit {
             case ONE_STRING: return 1;
             case TWO_STRING: return 2;
             case THREE_STRING: return 3;
+            case FOUR_STRING: return 4;
             default: return -1;
         }
     }

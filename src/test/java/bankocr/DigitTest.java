@@ -40,4 +40,13 @@ public class DigitTest {
         Digit digit3 = new Digit(head, body, foot);
         assertEquals(3, digit3.getIntValue());
     }
+
+    @Test
+    public void getIntValue4_shouldReturn4() {
+        String head = "   ";
+        String body = "|_|";
+        String foot = "  |";
+        Digit digit4 = new Digit(head, body, foot);
+        assertEquals(4, digit4.getIntValue());
+    }
 }
