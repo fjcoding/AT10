@@ -7,6 +7,11 @@ public class Digit {
         "| |" +
         "|_|";
 
+    public static final String ONE_STRING = 
+        "   " +
+        "  |" +
+        "  |";
+
     private String head;
     private String body;
     private String foot;
@@ -21,6 +26,7 @@ public class Digit {
         String digitString = head + body + foot;
         switch (digitString) {
             case ZERO_STRING: return 0;
+            case ONE_STRING: return 1;
             default: return -1;
         }
     }

@@ -13,4 +13,13 @@ public class DigitTest {
         Digit digit0 = new Digit(head, body, foot);
         assertEquals(0, digit0.getIntValue());
     }
+
+    @Test
+    public void getIntValue1_shouldReturn1() {
+        String head = "   ";
+        String body = "  |";
+        String foot = "  |";
+        Digit digit1 = new Digit(head, body, foot);
+        assertEquals(1, digit1.getIntValue());
+    }
 }
