@@ -58,4 +58,13 @@ public class DigitTest {
         Digit digit5 = new Digit(head, body, foot);
         assertEquals(5, digit5.getIntValue());
     }
+
+    @Test
+    public void getIntValue6_shouldReturn6() {
+        String head = " _ ";
+        String body = "|_ ";
+        String foot = "|_|";
+        Digit digit6 = new Digit(head, body, foot);
+        assertEquals(6, digit6.getIntValue());
+    }
 }

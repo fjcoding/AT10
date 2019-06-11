@@ -32,6 +32,11 @@ public class Digit {
         "|_ " +
         " _|";
 
+    public static final String SIX_STRING = 
+        " _ " +
+        "|_ " +
+        "|_|";
+
     private String head;
     private String body;
     private String foot;
@@ -51,6 +56,7 @@ public class Digit {
             case THREE_STRING: return 3;
             case FOUR_STRING: return 4;
             case FIVE_STRING: return 5;
+            case SIX_STRING: return 6;
             default: return -1;
         }
     }
