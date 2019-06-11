@@ -22,4 +22,13 @@ public class DigitTest {
         Digit digit1 = new Digit(head, body, foot);
         assertEquals(1, digit1.getIntValue());
     }
+
+    @Test
+    public void getIntValue2_shouldReturn2() {
+        String head = " _ ";
+        String body = " _|";
+        String foot = "|_ ";
+        Digit digit2 = new Digit(head, body, foot);
+        assertEquals(2, digit2.getIntValue());
+    }
 }

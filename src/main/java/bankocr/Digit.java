@@ -12,6 +12,11 @@ public class Digit {
         "  |" +
         "  |";
 
+    public static final String TWO_STRING = 
+        " _ " +
+        " _|" +
+        "|_ ";
+
     private String head;
     private String body;
     private String foot;
@@ -27,6 +32,7 @@ public class Digit {
         switch (digitString) {
             case ZERO_STRING: return 0;
             case ONE_STRING: return 1;
+            case TWO_STRING: return 2;
             default: return -1;
         }
     }
