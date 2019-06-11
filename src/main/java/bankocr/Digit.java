@@ -27,6 +27,11 @@ public class Digit {
         "|_|" +
         "  |";
 
+    public static final String FIVE_STRING = 
+        " _ " +
+        "|_ " +
+        " _|";
+
     private String head;
     private String body;
     private String foot;
@@ -45,6 +50,7 @@ public class Digit {
             case TWO_STRING: return 2;
             case THREE_STRING: return 3;
             case FOUR_STRING: return 4;
+            case FIVE_STRING: return 5;
             default: return -1;
         }
     }

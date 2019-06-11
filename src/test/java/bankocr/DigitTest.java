@@ -49,4 +49,13 @@ public class DigitTest {
         Digit digit4 = new Digit(head, body, foot);
         assertEquals(4, digit4.getIntValue());
     }
+
+    @Test
+    public void getIntValue5_shouldReturn5() {
+        String head = " _ ";
+        String body = "|_ ";
+        String foot = " _|";
+        Digit digit5 = new Digit(head, body, foot);
+        assertEquals(5, digit5.getIntValue());
+    }
 }
