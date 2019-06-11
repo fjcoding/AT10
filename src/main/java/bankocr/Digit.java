@@ -17,6 +17,11 @@ public class Digit {
         " _|" +
         "|_ ";
 
+    public static final String THREE_STRING = 
+        " _ " +
+        " _|" +
+        " _|";
+
     private String head;
     private String body;
     private String foot;
@@ -33,6 +38,7 @@ public class Digit {
             case ZERO_STRING: return 0;
             case ONE_STRING: return 1;
             case TWO_STRING: return 2;
+            case THREE_STRING: return 3;
             default: return -1;
         }
     }
