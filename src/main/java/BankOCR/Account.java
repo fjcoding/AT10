@@ -39,4 +39,16 @@ public class Account {
         }
         return answer;
     }
+
+    public String printAccountStatus() {
+        String convertedNumber = convertNumber();
+        if (convertedNumber.contains("-1")) {
+            return convertNumber().replaceAll("-1", "?") + " ILL";
+        }
+        if (!validateAccount()) {
+            return convertNumber() + " ERR";
+        } else {
+            return convertNumber();
+        }
+    }
 }

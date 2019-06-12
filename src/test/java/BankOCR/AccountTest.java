@@ -19,6 +19,7 @@ public class AccountTest {
     Digit seven = new Digit(Digit.SEVEN);
     Digit eight = new Digit(Digit.EIGHT);
     Digit nine = new Digit(Digit.NINE);
+    Digit ILL = new Digit("-1");
 
     @Test
     public void convertNumber_29_correctResult() {
@@ -260,5 +261,53 @@ public class AccountTest {
         accountDigits.add(one); 
         Account account = new Account(accountDigits);
         assertTrue(account.validateAccount());
+    }
+    
+    @Test
+    public void printAccountStatus_000000051_validAccount() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(five); 
+        accountDigits.add(one); 
+        Account account = new Account(accountDigits);
+        assertEquals("000000051", account.printAccountStatus());
+    }
+    
+    @Test
+    public void printAccountStatus_49006771_ILL() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(four); 
+        accountDigits.add(nine);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(six);
+        accountDigits.add(seven);
+        accountDigits.add(seven);
+        accountDigits.add(one); 
+        accountDigits.add(ILL); 
+        Account account = new Account(accountDigits);
+        assertEquals("49006771? ILL", account.printAccountStatus());
+    }
+    
+    @Test
+    public void printAccountStatus_664371495_ERR() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(six); 
+        accountDigits.add(six);
+        accountDigits.add(four);
+        accountDigits.add(three);
+        accountDigits.add(seven);
+        accountDigits.add(one);
+        accountDigits.add(four);
+        accountDigits.add(nine); 
+        accountDigits.add(five); 
+        Account account = new Account(accountDigits);
+        assertEquals("664371495 ERR", account.printAccountStatus());
     }
 }
