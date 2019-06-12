@@ -1,18 +1,28 @@
 package BankOCR;
 
+import java.util.List;
+
 public class Account {
+
+    List<Digit> digits;
+    
     public Account() {
 
     }
+    
+    public Account(List<Digit> digits) {
+        this.digits = digits;
+    }
 
-    public String convertNumber(Digit[] digits) {
-        StringBuilder resultAux = new StringBuilder();
-        int aux;
-        for (int index = 0; index < digits.length; index++) {
-            aux = digits[index].convertArrays();
-            resultAux.append(aux);
+    public String convertNumber() {
+        StringBuilder preResult = new StringBuilder();
+        int convertedDigit;
+        //for (int arrayIndex = 0; arrayIndex < digits.length; arrayIndex++) {
+        for (Digit item : digits) {
+            convertedDigit = item.convertArrays();
+            preResult.append(convertedDigit);
         }
-        String result = resultAux.toString();
+        String result = preResult.toString();
         return result;
     }
 }
