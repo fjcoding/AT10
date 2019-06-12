@@ -42,4 +42,13 @@ public class AccountNumberTest {
         AccountNumber accountNumber = new AccountNumber(head_number,body_number,foot_number);
         assertFalse(accountNumber.validateAccountNumber());
     }
+    
+    @Test
+    public void printResult_correctResult() { 
+        String head_number = " _  _     _  _        _  _ ";
+        String body_number = "|_ |_ |_| _|  |  ||_||_||_ ";
+        String foot_number = "|_||_|  | _|  |  |  | _| _|";
+        AccountNumber accountNumber = new AccountNumber(head_number,body_number,foot_number);
+        assertEquals("664371495 ERR",accountNumber.printResult());
+    }
 }
