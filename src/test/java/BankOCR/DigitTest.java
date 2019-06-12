@@ -7,19 +7,34 @@ import org.junit.Test;
 public class DigitTest {
     @Test
     public void convertArrays_CorrectResult0() {
-        String inputDigit0 = " _ | ||_|";
+        String inputDigit = " _ "
+                           + "| |"
+                           + "|_|";
         int expected = 0;
-        Digit digit = new Digit();
-        int actual = digit.convertArrays(inputDigit0);
+        Digit digit = new Digit(inputDigit);
+        int actual = digit.convertArrays();
         assertEquals(expected, actual);
     }
 
     @Test
     public void convertArrays_CorrectResult1() {
-        String inputDigit1 = "     |  |";
+        String inputDigit = "   "
+                           + "  |"
+                           + "  |";
         int expected = 1;
-        Digit digit1 = new Digit();
-        int actual = digit1.convertArrays(inputDigit1);
+        Digit digit = new Digit(inputDigit);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void convertArrays_CorrectResult2() {
+        String inputDigit = " _ "
+                          + " _|"
+                          + "|_ ";
+        int expected = 2;
+        Digit digit = new Digit(inputDigit);
+        int actual = digit.convertArrays();
         assertEquals(expected, actual);
     }
 }

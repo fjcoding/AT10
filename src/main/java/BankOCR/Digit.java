@@ -2,13 +2,19 @@ package BankOCR;
 
 public class Digit {
 
-    public int convertArrays(String string) {
-        switch (string) {
+    String digits;
+
+    public Digit(String strDigit) {
+        this.digits = strDigit;
+    }
+
+    public int convertArrays() {
+        switch (digits) {
         case " _ | ||_|":
             return 0;
         case "     |  |":
             return 1;
-        case " _  _||_":
+        case " _  _||_ ":
             return 2;
         case " _  _| _|":
             return 3;
@@ -29,5 +35,4 @@ public class Digit {
 
         }
     }
-
 }
