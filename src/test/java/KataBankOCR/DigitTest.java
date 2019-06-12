@@ -12,9 +12,9 @@ public class DigitTest {
 		   		      + " _|"
 		              + "|_ ";
 				
-		Digit digit = new Digit();
+		Digit digit = new Digit(number);
 		Integer expected = 2;
-		assertEquals(expected, digit.getDigit(number));
+		assertEquals(expected, digit.getDigit());
 	}
 
 }

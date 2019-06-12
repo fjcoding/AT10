@@ -3,12 +3,12 @@ package KataBankOCR;
 import java.util.HashMap;
 
 public class Digit {
-	
-	
-	public Digit() {
-		
+	String number;
+	public Digit(String number) {
+		this.number = number;
 	}
-	public Integer getDigit(String number) {
+	
+	public Integer getDigit() {
 		HashMap<String, Integer> stringToNumber = new HashMap<String, Integer>();
 		stringToNumber.put(" _ "
   		                 + "| |"
