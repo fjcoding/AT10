@@ -229,4 +229,36 @@ public class AccountTest {
         Account account = new Account(accountDigits);
         assertEquals("123456789", account.convertNumber());
     }
+    
+    @Test
+    public void validateAccount_345882865_correctResult() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(three); 
+        accountDigits.add(four); 
+        accountDigits.add(five); 
+        accountDigits.add(eight); 
+        accountDigits.add(eight); 
+        accountDigits.add(two); 
+        accountDigits.add(eight); 
+        accountDigits.add(six); 
+        accountDigits.add(five); 
+        Account account = new Account(accountDigits);
+        assertTrue(account.validateAccount());
+    }
+    
+    @Test
+    public void validateAccount_000000051_correctResult() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(five); 
+        accountDigits.add(one); 
+        Account account = new Account(accountDigits);
+        assertTrue(account.validateAccount());
+    }
 }
