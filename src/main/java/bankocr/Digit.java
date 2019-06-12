@@ -1,81 +1,47 @@
 package bankocr;
 
-public class Digit {
+public enum Digit {
 
-    public static final String ZERO_STRING = 
-        " _ " +
-        "| |" +
-        "|_|";
+    ZERO  (" _ ", 
+           "| |", 
+           "|_|", 0),
+    ONE   ("   ", 
+           "  |", 
+           "  |", 1),
+    TWO   (" _ ", 
+           " _|", 
+           "|_ ", 2),
+    THREE (" _ ", 
+           " _|", 
+           " _|", 3),
+    FOUR  ("   ", 
+           "|_|", 
+           "  |", 4),
+    FIVE  (" _ ", 
+           "|_ ", 
+           " _|", 5),
+    SIX   (" _ ", 
+           "|_ ", 
+           "|_|", 6),
+    SEVEN (" _ ", 
+           "  |", 
+           "  |", 7),
+    EIGHT (" _ ", 
+           "|_|", 
+           "|_|", 8),
+    NINE  (" _ ", 
+           "|_|", 
+           " _|", 9);
 
-    public static final String ONE_STRING = 
-        "   " +
-        "  |" +
-        "  |";
+    public final String head;
+    public final String body;
+    public final String foot;
+    public final int intMode;
 
-    public static final String TWO_STRING = 
-        " _ " +
-        " _|" +
-        "|_ ";
-
-    public static final String THREE_STRING = 
-        " _ " +
-        " _|" +
-        " _|";
-
-    public static final String FOUR_STRING = 
-        "   " +
-        "|_|" +
-        "  |";
-
-    public static final String FIVE_STRING = 
-        " _ " +
-        "|_ " +
-        " _|";
-
-    public static final String SIX_STRING = 
-        " _ " +
-        "|_ " +
-        "|_|";
-
-    public static final String SEVEN_STRING = 
-        " _ " +
-        "  |" +
-        "  |";
-
-    public static final String EIGHT_STRING = 
-        " _ " +
-        "|_|" +
-        "|_|";
-
-    public static final String NINE_STRING = 
-        " _ " +
-        "|_|" +
-        " _|";
-
-    private String head;
-    private String body;
-    private String foot;
-
-    public Digit (String head, String body, String foot) {
+    Digit(String head, String body, String foot, int intMode) {
         this.head = head;
         this.body = body;
         this.foot = foot;
-    }
-
-    public int getIntValue() {
-        String digitString = head + body + foot;
-        switch (digitString) {
-            case ZERO_STRING: return 0;
-            case ONE_STRING: return 1;
-            case TWO_STRING: return 2;
-            case THREE_STRING: return 3;
-            case FOUR_STRING: return 4;
-            case FIVE_STRING: return 5;
-            case SIX_STRING: return 6;
-            case SEVEN_STRING: return 7;
-            case EIGHT_STRING: return 8;
-            case NINE_STRING: return 9;
-            default: return -1;
-        }
+        this.intMode = intMode;
     }
 }
