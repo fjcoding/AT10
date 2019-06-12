@@ -229,4 +229,67 @@ public class AccountTest {
         Account account = new Account(accountDigits);
         assertEquals("123456789", account.convertNumber());
     }
+    @Test
+    public void checkSum_123456789_correctResult0() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(one); 
+        accountDigits.add(two); 
+        accountDigits.add(three); 
+        accountDigits.add(four); 
+        accountDigits.add(five); 
+        accountDigits.add(six); 
+        accountDigits.add(seven); 
+        accountDigits.add(eight); 
+        accountDigits.add(nine); 
+        Account account = new Account(accountDigits);
+        assertEquals(0, account.checkSum());
+    }
+    @Test
+    public void checkSum_000000000_correctResult0() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        accountDigits.add(zero);
+        Account account = new Account(accountDigits);
+        assertEquals(0, account.checkSum());
+    }
+    @Test
+    public void checkSum_12_correctResultNot0() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(one); 
+        accountDigits.add(two); 
+        Account account = new Account(accountDigits);
+        assertNotEquals(0, account.checkSum());
+    }
+    @Test
+    public void checkSum_12345_correctResultNot0() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(one); 
+        accountDigits.add(two); 
+        accountDigits.add(three); 
+        accountDigits.add(four); 
+        accountDigits.add(five);       
+        Account account = new Account(accountDigits);
+        assertNotEquals(0, account.checkSum());
+    }
+    @Test
+    public void convertNumber_00009876_correctResultNot0() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(zero); 
+        accountDigits.add(zero); 
+        accountDigits.add(zero); 
+        accountDigits.add(nine); 
+        accountDigits.add(eight); 
+        accountDigits.add(seven); 
+        accountDigits.add(six); 
+        Account account = new Account(accountDigits);
+        assertNotEquals(0, account.checkSum());
+    }
 }
