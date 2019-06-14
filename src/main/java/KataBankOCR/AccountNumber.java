@@ -47,8 +47,4 @@ public class AccountNumber {
         }
         return answer;
     }
-
-    public String printResult() {
-        return null;
-    }
 }
