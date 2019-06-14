@@ -19,7 +19,13 @@ public class AccountTest {
     Digit seven = new Digit(Digit.SEVEN);
     Digit eight = new Digit(Digit.EIGHT);
     Digit nine = new Digit(Digit.NINE);
-
+    Digit A = new Digit(Digit.A);
+    Digit B = new Digit(Digit.B);
+    Digit C = new Digit(Digit.C);
+    Digit D = new Digit(Digit.D);
+    Digit E = new Digit(Digit.E);
+    Digit F = new Digit(Digit.F);
+    
     @Test
     public void convertNumber_29_correctResult() {
         List<Digit> accountDigits = new ArrayList<>();
@@ -291,5 +297,16 @@ public class AccountTest {
         accountDigits.add(six); 
         Account account = new Account(accountDigits);
         assertNotEquals(0, account.checkSum());
+    }
+    
+    @Test
+    public void isHexadecimal_True() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(seven); 
+        accountDigits.add(B); 
+        accountDigits.add(A); 
+        Account account = new Account(accountDigits);
+        assertTrue(account.isHexadecimal());
     }
 }
