@@ -31,6 +31,25 @@ public class Digit {
     final static String NINE =     " _ "
                                 +  "|_|"
                                 +  " _|";
+    final static String A =        " _ "
+                                +  "|_|"
+                                +  "| |";
+    final static String B =        "   "
+                                +  "|_ "
+                                +  "|_|";
+
+    final static String C =        " _ "
+                                +  "|  "
+                                +  "|_ ";
+    final static String D =        "   "
+                                +  " _|"
+                                +  "|_|";
+    final static String E =        " _ "
+                                +  "|_ "
+                                +  "|_ ";
+    final static String F =        " _ "
+                                +  "|_ "
+                                +  "|  ";
 
     String digit;
 
@@ -60,6 +79,18 @@ public class Digit {
             return 8;
         case NINE:
             return 9;
+        case A:
+            return 10;
+        case B:
+            return 11;
+        case C:
+            return 12;
+        case D:
+            return 13;
+        case E:
+            return 14;
+        case F:
+            return 15;
         default:
             return -1;
         }

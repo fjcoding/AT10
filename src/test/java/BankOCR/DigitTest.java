@@ -84,4 +84,52 @@ public class DigitTest {
         int actual = digit.convertArrays();
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void convertArrays_CorrectResultA() {
+        int expected = 10;
+        Digit digit = new Digit(Digit.A);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void convertArrays_CorrectResultB() {
+        int expected = 11;
+        Digit digit = new Digit(Digit.B);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void convertArrays_CorrectResultC() {
+        int expected = 12;
+        Digit digit = new Digit(Digit.C);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void convertArrays_CorrectResultD() {
+        int expected = 13;
+        Digit digit = new Digit(Digit.D);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void convertArrays_CorrectResultE() {
+        int expected = 14;
+        Digit digit = new Digit(Digit.E);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void convertArrays_CorrectResultF() {
+        int expected = 15;
+        Digit digit = new Digit(Digit.F);
+        int actual = digit.convertArrays();
+        assertEquals(expected, actual);
+    }
 }
