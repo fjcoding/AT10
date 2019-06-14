@@ -17,7 +17,6 @@ public class Account {
     public String convertNumber() {
         StringBuilder preResult = new StringBuilder();
         int convertedDigit;
-        // for (int arrayIndex = 0; arrayIndex < digits.length; arrayIndex++) {
         for (Digit item : digits) {
             convertedDigit = item.convertArrays();
             preResult.append(convertedDigit);
@@ -64,4 +63,17 @@ public class Account {
         }
     }
 
+    public Integer convertHexaNumber() {
+        Integer result = 0;
+        Integer convertedDigit;
+        Integer BASE = 16;
+        for (int index = 0; index < digits.size(); index++) {
+            Digit digitInIndex = digits.get(index);
+            convertedDigit = digitInIndex.convertArrays();
+            double power = Math.pow(BASE, digits.size() - index - 1);
+            result += convertedDigit * (int) power;
+        }
+
+        return result;
+    }
 }

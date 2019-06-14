@@ -309,4 +309,16 @@ public class AccountTest {
         Account account = new Account(accountDigits);
         assertTrue(account.isHexadecimal());
     }
+    
+    @Test
+    public void convertHexaNumber_correctResult() {
+        List<Digit> accountDigits = new ArrayList<>();
+        accountDigits.add(zero); 
+        accountDigits.add(seven); 
+        accountDigits.add(B); 
+        accountDigits.add(A); 
+        Account account = new Account(accountDigits);
+        Integer expected = 1978;
+        assertEquals(expected, account.convertHexaNumber());
+    }
 }
