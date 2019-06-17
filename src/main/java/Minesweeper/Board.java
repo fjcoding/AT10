@@ -7,9 +7,8 @@ public class Board {
     int numeroMinas = 0;
     int intentos = 0;
     int tminas = 5;
-    double a = 0;
-    double b = 0;
-
+    double numberA = 0;
+    double numberB = 0;
     /*
     Asignamos el numero de filas n y el numero de columnas.
     */
@@ -18,7 +17,6 @@ public class Board {
         this.columnasM = m;
         return true;
     }
-
     /*
     En este metodo llenamos la matriz con .
      */
@@ -28,18 +26,17 @@ public class Board {
                 tablero[index][indexj] = ".";
         return true;
     }
-
     /*
     Aca se asigna valores que son los asteriscos que representan las bombas
      */
     public boolean Aleatorio() {
         do {
-            a = Math.random() * 100;
-            b = Math.random() * 100;
-            a = (int) a;
-            b = (int) b;
-            if (b != 0 && a != 0 && b != 100 - 1 && a != 100 - 1) {
-                tablero[(int) a][(int) b] = "*";
+            numberA = Math.random() * 100;
+            numberB = Math.random() * 100;
+            numberA = (int) numberA;
+            numberB = (int) numberB;
+            if (numberB != 0 && numberA != 0 && numberB != 100 - 1 && numberA != 100 - 1) {
+                tablero[(int) numberA][(int) numberB] = "*";
                 numeroMinas++;
             }
         } while (numeroMinas <= 5);
