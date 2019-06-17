@@ -9,10 +9,13 @@ public class CellTest{
 
     @Test
     public void creationTable_correctResult4x4(){
-        table = new Cell(4, 4);
-        assertEquals("...." +
-                              "...." +
-                              "...." +
-                              "....", table.creationTable());
+        table = new Cell(4, 4,"...." +
+                "...." +
+                "...." +
+                "...." );
+        assertEquals("0000" +
+                              "0000" +
+                              "0000" +
+                              "0000", table.creationTable());
     }
 }
