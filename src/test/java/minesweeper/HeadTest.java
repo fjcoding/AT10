@@ -12,4 +12,10 @@ public class HeadTest {
 		String excepted = "2";
 		assertEquals(excepted, head.lines());
 	}
+	@Test
+	public void columns_23_result3() {
+		Head head = new Head("2 3");
+		String excepted = "3";
+		assertEquals(excepted, head.columns());
+	}
 }

@@ -9,4 +9,7 @@ public class Head {
 	public String lines() {
 		return head.substring(0,1);
 	}
+	public String columns() {
+		return head.substring(2,3);
+	}
 }
