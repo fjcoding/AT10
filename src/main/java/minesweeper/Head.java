@@ -2,14 +2,20 @@ package minesweeper;
 
 public class Head {
 	String head;
-
+	String lines;
+	String columns;
+	String [] linesColumns;
 	public Head(String head) {
 		this.head = head;
 	}
+	public String[] linesColumns() {
+		linesColumns = head.split(" ");
+		return linesColumns;
+	}
 	public String lines() {
-		return head.substring(0,1);
+		return linesColumns[0];
 	}
 	public String columns() {
-		return head.substring(2,3);
+		return head.substring(2, 3);
 	}
 }
