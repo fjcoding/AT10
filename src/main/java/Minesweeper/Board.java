@@ -2,26 +2,37 @@ package Minesweeper;
 
 public class Board {
     String tablero[][] = new String[100][100];
-    int n;
-    int m;
+    int filasN;
+    int columnasM;
     int numeroMinas = 0;
     int intentos = 0;
     int tminas = 5;
     double a = 0;
     double b = 0;
 
-    public boolean asignar(int n, int m){
-        this.n=n;
-        this.m=m;
+    /*
+    Asignamos el numero de filas n y el numero de columnas.
+    */
+    public boolean asignar(int n, int m) {
+        this.filasN = n;
+        this.columnasM = m;
         return true;
     }
-    public boolean llenar (){
-        for (int j = 0; j < n; j++)
-            for (int i = 0; i < m; i++)
-                tablero[j][i] = ".";
-            return true;
+
+    /*
+    En este metodo llenamos la matriz con .
+     */
+    public boolean llenar() {
+        for (int index = 0; index < filasN; index++)
+            for (int indexj = 0; indexj < columnasM; indexj++)
+                tablero[index][indexj] = ".";
+        return true;
     }
-    public boolean Aleatorio(){
+
+    /*
+    Aca se asigna valores que son los asteriscos que representan las bombas
+     */
+    public boolean Aleatorio() {
         do {
             a = Math.random() * 100;
             b = Math.random() * 100;

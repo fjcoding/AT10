@@ -13,10 +13,12 @@ public class BoardTest {
         int m=4;
         assertEquals(expected, board.asignar(n,m));
     }
+    @Test
     public void addValuefillWithAsterisco_True() throws Exception {
         Boolean expected = true;
         assertEquals(expected, board.llenar());
     }
+    @Test
     public void addValuesAleatorio_True() throws Exception {
         Boolean expected = true;
         assertEquals(expected, board.Aleatorio());
