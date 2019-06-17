@@ -17,4 +17,8 @@ public class BoardTest {
         Boolean expected = true;
         assertEquals(expected, board.llenar());
     }
+    public void addValuesAleatorio_True() throws Exception {
+        Boolean expected = true;
+        assertEquals(expected, board.Aleatorio());
+    }
 }
