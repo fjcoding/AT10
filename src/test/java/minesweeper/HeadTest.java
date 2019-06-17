@@ -17,6 +17,7 @@ public class HeadTest {
 	public void columns_23_result3() {
 		Head head = new Head("2 3");
 		String excepted = "3";
+		head.linesColumns();
 		assertEquals(excepted, head.columns());
 	}
 }

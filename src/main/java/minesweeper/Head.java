@@ -16,6 +16,6 @@ public class Head {
 		return linesColumns[0];
 	}
 	public String columns() {
-		return head.substring(2, 3);
+		return linesColumns[1];
 	}
 }
