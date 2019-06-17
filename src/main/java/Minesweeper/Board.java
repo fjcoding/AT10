@@ -2,7 +2,6 @@ package Minesweeper;
 
 public class Board {
     String tablero[][] = new String[100][100];
-    int tableroNumber[][] = new int[100][100];
     int n;
     int m;
     int numeroMinas = 0;
@@ -12,16 +11,14 @@ public class Board {
     double b = 0;
 
     public boolean asignar(int n, int m){
-
         this.n=n;
         this.m=m;
-
         return true;
     }
     public boolean llenar (){
         for (int j = 0; j < n; j++)
             for (int i = 0; i < m; i++)
-                tablero[j][i] = "*";
+                tablero[j][i] = ".";
             return true;
     }
     public boolean Aleatorio(){
@@ -31,7 +28,7 @@ public class Board {
             a = (int) a;
             b = (int) b;
             if (b != 0 && a != 0 && b != 100 - 1 && a != 100 - 1) {
-                tableroNumber[(int) a][(int) b] = 1;
+                tablero[(int) a][(int) b] = "*";
                 numeroMinas++;
             }
         } while (numeroMinas <= 5);
