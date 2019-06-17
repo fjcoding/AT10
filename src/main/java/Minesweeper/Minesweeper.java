@@ -9,7 +9,7 @@ public class Minesweeper {
     }
         
     public char[][] matrixGenerator() {
-        char[][] matrix = {{'0', '0'}, {'0', '0'}};
+        char[][] matrix = {{'0', '0','0','0'}, {'0', '0','0','0'}, {'0', '0','0','0'}, {'0', '0','0','0'}};
         return matrix;
     }
 }
