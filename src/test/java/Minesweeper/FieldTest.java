@@ -8,7 +8,9 @@ public class FieldTest {
 
     @Test
     public void getMineNeighbors_3correctResult() {
-        Character[][] fieldNeighbors = {{' ','*',' '},{' ','t','*'},{' ',' ','*'}};
+        Character[] fieldNeighbors = {'.','*','.',
+                                      '.',    '*',
+                                      '.','.','*'};
         Field field = new Field(fieldNeighbors);
         Integer expected = 3;
         Integer actual = field.getMineNeighbors(); 
