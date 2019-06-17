@@ -1,5 +1,7 @@
 package Minesweeper;
 
+import java.util.ArrayList;
+
 public class Cell {
     Integer row;
     Integer column;
@@ -10,12 +12,14 @@ public class Cell {
     }
 
     public String creationTable() {
+        byte[][] table = new byte[row][column];
         String rowResult = "";
-        for (Integer indexRow = 1; indexRow <= row; indexRow++) {
-            for (Integer indexColumn = 1; indexColumn <= column; indexColumn++) {
+        for (Integer indexRow = 1; indexRow <= table.length; indexRow++) {
+            for (Integer indexColumn = 1; indexColumn <= table[0].length; indexColumn++) {
                 rowResult += ".";
             }
         }
         return rowResult;
     }
+
 }
